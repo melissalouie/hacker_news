@@ -1,0 +1,24 @@
+<div class="container">
+  
+  <h1> This is your profile</h1>
+
+  <!-- list all of authored posts -->
+
+<% @posts.each do |post| %>
+<a href="/<%= post.id %>"><%= post.title%></a>
+<% end %>
+
+<form action='/create_post' method="POST">
+    <label>Title: <input type="text" name="newpost[title]"></label><br>
+     <label>Post Body:<textarea rows="10" cols="50" name="newpost[body]" placeholder="Enter your text..."></textarea></label>
+     <input type="submit" value="submit">
+</form>
+
+
+
+
+<a href="/news">All News</a>
+
+
+
+</div>

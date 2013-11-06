@@ -1,0 +1,10 @@
+<h1> Your post! </h1>
+  <%= @post.title %>
+  <%= @post.body %>
+
+<h2> Your post's comments <h2>
+  <% @comments.each do |comment| %>
+  <%= comment.text %>
+  <% end %>
+
+
